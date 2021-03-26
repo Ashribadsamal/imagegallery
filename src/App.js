@@ -24,7 +24,7 @@ function App() {
 
  const getData = async() =>{
    setLoading(true);
-    const res = await axios(`https://api.unsplash.com/search/photos?query=${query}&client_id=GSXed7BMAHzmskGCwo_Y-1mMub84DjNTNqon82SYnAo`)
+    const res = await axios(`https://api.unsplash.com/search/photos?query=${query}&per_page=30&client_id=GSXed7BMAHzmskGCwo_Y-1mMub84DjNTNqon82SYnAo`)
     setLoading(false);
     setData(res.data.results)
     setTotalPage(Math.ceil(res.data.results.length/USER_PER_PAGE))
